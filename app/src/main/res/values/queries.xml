@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--language=SQLite-->
+    <string name="insert_user">
+        INSERT INTO users (age, name, email)
+        VALUES (?, ?, ?);
+    </string>
+
+    <!--language=SQLite-->
+    <string name="select_all_users">
+        SELECT
+            id,
+            age,
+            name,
+            email
+        FROM users WHERE age > 500;
+    </string>
+
+    <!--language=SQLite-->
+    <string name="drop_table_users">
+        DROP TABLE IF EXISTS users;
+    </string>
+
+    <!--language=SQLite-->
+    <string name="delete_all_users">
+        DELETE FROM users;
+    </string>
+
+    <!--language=SQLite-->
+    <string name="create_table_user">
+        CREATE TABLE IF NOT EXISTS users (
+            id    INTEGER PRIMARY KEY AUTOINCREMENT,
+            age   INTEGER,
+            name  TEXT,
+            email TEXT
+        );
+    </string>
+</resources>
