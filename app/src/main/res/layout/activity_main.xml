@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="${relativePackage}.${activityClass}">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="${relativePackage}.${activityClass}">
 
     <Button
             android:id="@+id/btnDeleteAllUsers"
@@ -23,7 +23,7 @@
             android:id="@+id/btnStartListActivity"
             android:layout_below="@id/btnInsertUsers"
             android:layout_centerHorizontal="true"
-            android:text="Start list activity"
+            android:text="Start lazy list activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -31,7 +31,15 @@
             android:id="@+id/btnStartListActivity2"
             android:layout_below="@id/btnStartListActivity"
             android:layout_centerHorizontal="true"
-            android:text="Start list activity2"
+            android:text="Start not-lazy list activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/btnStartListActivity3"
+            android:layout_below="@id/btnStartListActivity2"
+            android:layout_centerHorizontal="true"
+            android:text="Start lazy list activity (improved)"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

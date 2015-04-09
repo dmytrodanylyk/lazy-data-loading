@@ -19,6 +19,7 @@
 
         <activity android:name=".UserListActivity"/>
         <activity android:name=".UserListActivity2"/>
+        <activity android:name=".UserListActivity3"/>
 
     </application>
 

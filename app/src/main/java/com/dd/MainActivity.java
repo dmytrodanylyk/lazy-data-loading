@@ -1,7 +1,6 @@
 package com.dd;
 
 import android.app.Activity;
-import android.graphics.drawable.ClipDrawable;
 import android.os.Bundle;
 import android.view.View;
 import com.dd.data.User;
@@ -63,6 +62,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 UserListActivity2.start(MainActivity.this);
+            }
+        });
+
+        findViewById(R.id.btnStartListActivity3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserListActivity3.start(MainActivity.this);
             }
         });
     }

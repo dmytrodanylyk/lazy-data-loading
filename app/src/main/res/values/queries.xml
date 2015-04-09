@@ -14,7 +14,7 @@
             age,
             name,
             email
-        FROM users WHERE age > 500;
+        FROM users;
     </string>
 
     <!--language=SQLite-->

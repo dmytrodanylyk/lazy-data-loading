@@ -4,6 +4,7 @@ package com.dd.model.dao;
 import android.content.Context;
 import android.database.Cursor;
 import com.dd.R;
+import com.dd.data.LazyList;
 import com.dd.data.User;
 import com.dd.data.UserProxy;
 import com.dd.model.Database;
@@ -64,6 +65,21 @@ public class UserDAO {
         Cursor cursor = mDatabase.rawQuery(mContext.getString(R.string.select_all_users), null);
         return manageProxyCursor(cursor);
     }
+
+	public LazyList<User> selectAllLazy() {
+		Cursor cursor = mDatabase.rawQuery(mContext.getString(R.string.select_all_users), null);
+		return new LazyList<>(cursor, new LazyList.ItemFactory<User>() {
+			@Override
+			public User create(Cursor cursor, int index) {
+				User user = new User();
+				cursor.moveToPosition(index);
+				int columnIndex = cursor.getColumnIndex("name");
+				user.setName(cursor.getString(columnIndex));
+                // TODO add parsing data from cursor
+				return user;
+			}
+		});
+	}
 
     public void closeCursor(Cursor cursor) {
         if (cursor != null) {
